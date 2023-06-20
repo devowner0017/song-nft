@@ -15,7 +15,7 @@ const people = [
   { id: 4, name: 'Benedict Kessler' },
   { id: 5, name: 'Katelyn Rohan' },
 ];
-const LeadBoardHead = () => {
+const LeadBoardHead = ({searchString, setSearchString}) => {
   const [viewByLabel, setViewByLabel] = useState(false);
   const [viewByUser, setViewByUser] = useState(true);
   const [viewPeriod, setViewPeriod] = useState('1DAY');
@@ -40,7 +40,9 @@ const LeadBoardHead = () => {
             placeholder='Search by username'
             name='searchByUsername'
             id='searchByUsername'
-            className='w-full pl-2 bg-transparent placeholder:text-white placeholder:text-opacity-20 focus:outline-none'
+            className='bg-slate-700 w-full'
+            value={searchString}
+            onChange={(e)=>setSearchString(e.target.value)}
           />
         </div>
       </div>

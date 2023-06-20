@@ -1,5 +1,4 @@
 const LeadBoardList = ({data}) => {
-  console.log(data, 'data')
   return (
     <div className='overflow-auto custom-scrollbar pb-2.5'>
       <div className='min-w-[720px] lead-board-list mt-11 md:px-4'>
